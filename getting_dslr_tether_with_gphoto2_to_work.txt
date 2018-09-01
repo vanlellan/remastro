@@ -1,0 +1,58 @@
+sudo apt-get update
+sudo apt-get install v4l2loopback-utils
+sudo apt-get install gphoto2 v4l2loopback-utils
+gphoto2 --abilities
+sudo modprobe v4l2loopback
+sudo apt-get install linux-generic
+sudo apt-get install v4l2loopback-dkms
+sudo modprobe v4l2loopback
+reboot
+lxnstack
+sudo modprobe v4l2loopback
+sudo modprobe uvcvideo
+sudo modprobe v4l2loopback
+sudo modprobe videodev
+sudo modprobe v4l2loopback
+sudo apt-get install linux-image-generic
+sudo modprobe v4l2loopback
+sudo apt-get install gphoto
+sudo apt-get install ffmpeg
+sudo modprobe v4l2loopback
+sudo modprobe v412loopback
+sudo modprobe v4l2loopback
+gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video1
+ls /dev/
+ls
+git clone https://github.com/umlaeute/v4l2loopback
+cd v4l2loopback/
+ls
+make
+sudo apt-get install libelf-dev
+make
+ls
+sudo make install
+ls
+depmod -a
+sudo depmod -a
+sudo modprobe v4l2loopback
+gphoto2 --stdout --capture-movie | ffmpeg -i - -vcodec rawvideo -pix_fmt yuv420p -threads 0 -f v4l2 /dev/video1
+ls
+ls -lth
+cd ../
+ls
+gphoto2 --stdout --capture-movie | gst-launch-1.0 fdsrc ! decodebin3 name=dec ! queue ! videoconvert ! v4l2sink device=/dev/video1
+ls /dev/
+gphoto2 --capture-movie --stdout | gst-launch-0.10 videotestsrc ! v4l2sink device=/dev/video1
+sudo apt-get install gstreamer0.10-tools
+gphoto2 --capture-movie --stdout | gst-launch-0.10 videotestsrc ! v4l2sink device=/dev/video1
+man gst-launch-1.0
+gphoto2 --capture-movie --stdout | gst-launch-1.0 videotestsrc ! v4l2sink device=/dev/video1
+ls /dev/vi*
+reboot
+lxnstack
+cheese
+exit
+ls /dev
+exit
+vlc movie.mjpg 
+exit
