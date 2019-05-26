@@ -3,6 +3,10 @@ from PIL import Image
 import io
 import sys
 
+# TODO
+#   Read bytes in chunks rather than 1 by 1
+#       will need to write flush bytes to fifo.mjpg after gphoto2 command finishes
+
 numImages = int(sys.argv[1])
 
 with open("fifo.mjpg","rb") as f:

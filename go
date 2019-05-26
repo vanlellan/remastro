@@ -1,5 +1,6 @@
 
 
+gphoto2 --auto-detect
 
 mkfifo fifo.mjpg
 
